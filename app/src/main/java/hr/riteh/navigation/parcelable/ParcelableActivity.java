@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 
 import hr.riteh.navigation.R;
@@ -20,12 +19,9 @@ public class ParcelableActivity extends AppCompatActivity {
         setContentView(R.layout.activity_parcelable);
 
         Intent intent = getIntent();
-        Log.e("AAAA", "intenttt " + intent);
         if (intent != null) {
             String text = intent.getStringExtra(INTENT_KEY_TEXT);
-            Log.e("AAAA", "text " + text);
             ParcelableClass student = intent.getParcelableExtra(INTENT_KEY_COMPLEX);
-            Log.e("AAAA", "student " + student);
             if (text != null && student != null) {
                 String textToShow = text + "\nId: " + student.id + "\nime: " + student.name + "\nocjena: " + student.grade;
 
