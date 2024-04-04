@@ -1,11 +1,14 @@
 package hr.riteh.navigation;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Locale;
 
 import hr.riteh.navigation.graph.GraphActivity;
 import hr.riteh.navigation.navigationTemplateCode.BottomNavigationViewsActivity;
@@ -61,6 +64,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
         openActivityWhenButtonIsPressed(R.id.graph, GraphActivity.class);
+
+        Button googleMaps = findViewById(R.id.google_maps);
+        googleMaps.setOnClickListener(v -> {
+            float latitude = 45.337621f;
+            float longitude = 14.425524f;
+            String label = "RiTeh";
+            String coords = latitude + "," + longitude;
+            Uri gmmIntentUri = Uri.parse("geo:" + coords + "?q=" + coords + "(" + label + ")");
+            Intent intent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+            // Odkomentirajte ovu liniju ispod da se lokacija automatski otvori u google maps aplikaciji.
+            // Bez linije ispod ce vas android sustav pitati u kojoj aplikaciji zelite otvoriti activity.
+//            intent.setPackage("com.google.android.apps.maps");
+            startActivity(intent);
+        });
     }
 
     private void openActivityWhenButtonIsPressed(int buttonId, Class<?> activityClass) {

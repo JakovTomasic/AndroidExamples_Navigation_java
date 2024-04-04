@@ -83,6 +83,13 @@
             android:text="Graph"
             android:layout_marginBottom="32dp"/>
 
+        <Button
+            android:id="@+id/google_maps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Google maps"
+            android:layout_marginBottom="32dp"/>
+
     </LinearLayout>
 
 </ScrollView>
