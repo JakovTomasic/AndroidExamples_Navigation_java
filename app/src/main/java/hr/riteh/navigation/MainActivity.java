@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Ovo su samo buttoni za otvaranje razlicitih primjera
+
         Button lifecycle = findViewById(R.id.lifecycle_example);
         lifecycle.setOnClickListener(v -> {
             Intent intent = new Intent(this, LifecycleActivity.class);
