@@ -12,6 +12,7 @@ import hr.riteh.navigation.parcelable.ParcelableActivity;
 import hr.riteh.navigation.parcelable.ParcelableClass;
 import hr.riteh.navigation.simpleFragment.SimpleFragmentActivityProgrammatically;
 import hr.riteh.navigation.simpleFragment.SimpleFragmentActivityXml;
+import hr.riteh.navigation.viewpager2.ViewPager2Activity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,6 +43,19 @@ public class MainActivity extends AppCompatActivity {
         openActivityWhenButtonIsPressed(R.id.fragments_example_programmatically, SimpleFragmentActivityProgrammatically.class);
         openActivityWhenButtonIsPressed(R.id.bottom_navigation, BottomNavigationViewsActivity.class);
 
+        Button viewPager2 = findViewById(R.id.view_pager_2);
+        viewPager2.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ViewPager2Activity.class);
+            intent.putExtra(ViewPager2Activity.INTENT_KEY_SHOW_TABS, false);
+            startActivity(intent);
+        });
+
+        Button viewPager2Tabs = findViewById(R.id.view_pager_2_tabs);
+        viewPager2Tabs.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ViewPager2Activity.class);
+            intent.putExtra(ViewPager2Activity.INTENT_KEY_SHOW_TABS, true);
+            startActivity(intent);
+        });
     }
 
     private void openActivityWhenButtonIsPressed(int buttonId, Class<?> activityClass) {

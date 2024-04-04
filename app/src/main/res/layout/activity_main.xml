@@ -1,63 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/title"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="32sp"
-        android:textColor="@color/black"
-        android:text="Main activity"
+        android:paddingTop="?attr/actionBarSize"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="64dp"/>
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/lifecycle_example"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="activity lifecycle"
-        android:layout_marginBottom="32dp"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:text="Main activity"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="64dp"/>
 
-    <EditText
-        android:id="@+id/parcelable_edit_text"
-        android:layout_width="256dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"/>
+        <Button
+            android:id="@+id/lifecycle_example"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="activity lifecycle"
+            android:layout_marginBottom="32dp"/>
 
-    <Button
-        android:id="@+id/parcelable_example"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Parcelbable"
-        android:layout_marginBottom="32dp"/>
+        <EditText
+            android:id="@+id/parcelable_edit_text"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"/>
 
-    <Button
-        android:id="@+id/fragments_example_xml"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Simple fragment XML"
-        android:layout_marginBottom="32dp"/>
+        <Button
+            android:id="@+id/parcelable_example"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parcelbable"
+            android:layout_marginBottom="32dp"/>
 
-    <Button
-        android:id="@+id/fragments_example_programmatically"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Simple fragment programmatically"
-        android:layout_marginBottom="32dp"/>
+        <Button
+            android:id="@+id/fragments_example_xml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simple fragment XML"
+            android:layout_marginBottom="32dp"/>
 
-    <Button
-        android:id="@+id/bottom_navigation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bottom navigation"
-        android:layout_marginBottom="32dp"/>
+        <Button
+            android:id="@+id/fragments_example_programmatically"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simple fragment programmatically"
+            android:layout_marginBottom="32dp"/>
 
+        <Button
+            android:id="@+id/view_pager_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ViewPager2"
+            android:layout_marginBottom="32dp"/>
 
+        <Button
+            android:id="@+id/view_pager_2_tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ViewPager2 with tabs"
+            android:layout_marginBottom="32dp"/>
 
-</LinearLayout>
+        <Button
+            android:id="@+id/bottom_navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bottom navigation"
+            android:layout_marginBottom="32dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
