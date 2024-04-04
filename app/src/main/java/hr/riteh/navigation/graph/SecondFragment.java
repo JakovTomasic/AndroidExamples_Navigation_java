@@ -1,4 +1,4 @@
-package hr.riteh.navigation;
+package hr.riteh.navigation.graph;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,37 +7,35 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
-import hr.riteh.navigation.databinding.FragmentFirstBinding;
 
-public class FirstFragment extends Fragment {
+import hr.riteh.navigation.R;
+import hr.riteh.navigation.databinding.FragmentSecondBinding;
 
-private FragmentFirstBinding binding;
+public class SecondFragment extends Fragment {
+
+    private FragmentSecondBinding binding;
 
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-
-      binding = FragmentFirstBinding.inflate(inflater, container, false);
-      return binding.getRoot();
-
+        binding = FragmentSecondBinding.inflate(inflater, container, false);
+        return binding.getRoot();
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
-            }
+        binding.buttonSecond.setOnClickListener(v -> {
+            NavController controller = NavHostFragment.findNavController(SecondFragment.this);
+            controller.navigate(R.id.action_SecondFragment_to_FirstFragment);
         });
     }
 
-@Override
+    @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;

@@ -76,6 +76,13 @@
             android:text="Bottom navigation"
             android:layout_marginBottom="32dp"/>
 
+        <Button
+            android:id="@+id/graph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Graph"
+            android:layout_marginBottom="32dp"/>
+
     </LinearLayout>
 
 </ScrollView>

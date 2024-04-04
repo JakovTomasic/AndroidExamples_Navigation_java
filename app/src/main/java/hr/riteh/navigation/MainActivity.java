@@ -7,6 +7,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import hr.riteh.navigation.graph.GraphActivity;
 import hr.riteh.navigation.navigationTemplateCode.BottomNavigationViewsActivity;
 import hr.riteh.navigation.parcelable.ParcelableActivity;
 import hr.riteh.navigation.parcelable.ParcelableClass;
@@ -56,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra(ViewPager2Activity.INTENT_KEY_SHOW_TABS, true);
             startActivity(intent);
         });
+
+        openActivityWhenButtonIsPressed(R.id.graph, GraphActivity.class);
     }
 
     private void openActivityWhenButtonIsPressed(int buttonId, Class<?> activityClass) {
